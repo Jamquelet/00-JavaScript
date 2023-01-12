@@ -1,0 +1,58 @@
+<!-- Boiler plays automaticos html:5 -->
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>basic programming</title>
+        <style type="text/css">
+            body {
+                background-color: #a9a9c100;
+                color: green;
+                font-family: Helvetica;
+                text-align: center;
+                font-size: larger;
+             }
+            strong {
+                background-color:cadetblue;
+            }
+            #container {
+                border-radius: 50%;
+            }
+        </style>
+</head>
+
+<body>
+       
+        <section id="container"><!--Elegir el peso en la tierra y que nos muestre el peso en Marte o Jupiter, elegir el resultado en marte o en jupiter, preguntando al user que opcion y escribiendo una condicional-->     
+            <h1>Your <strong>weight</strong> on another planet</h1>
+            <p>En la tierra pesas distinto que en Marte o Jupiter</p>
+            <script type="text/javascript">
+                var usuario = prompt("what is your weight?");
+                var planeta = parseInt(prompt("choose your planet\n 1 is Mars, 2 is Jupiter"));//\n salto de linea
+                var peso =  parseInt(usuario);
+                var g_tierra = 9.8;
+                var g_marte = 3.7;
+                var g_jupiter = 24.8;
+                var peso_final;
+                var nombre;
+
+                if (planeta == 1) {
+                    peso_final = peso * g_marte / g_tierra;
+                    nombre = "Mars";
+                }
+                else if (planeta == 2){
+                    peso_final = peso * g_jupiter / g_tierra;
+                    nombre = "Jupiter";
+                }
+                else {
+                    alert("choose between 1 or 2\n\nreload");
+                    nombre = "Krypton"
+                }
+                peso_final = parseInt(peso_final);
+                document.write("Your final weight in " + nombre + " is <strong>" + peso_final + " kilogram</strong>");
+            </script>
+        </section>
+
+</body>
+
+</html>
