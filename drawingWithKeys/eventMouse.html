@@ -1,0 +1,143 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing with mouse</title>
+</head>
+<body>
+    <p>Select the color
+        <input type="color" id="selectColor"/>
+    </p>
+    <canvas width="300" height="300" id="drawingArea"></canvas>
+    <script>
+        var click = {
+            MOUSEDOWN: 1,
+            MOUSEUP: 0
+        };
+        var colors = document.getElementById("selectColor");
+        var square = document.getElementById("drawingArea");
+        var paper = square.getContext("2d");
+        //var state;
+        var x = square.clientX;
+        var y = square.clientY; 
+
+        square.addEventListener("mousemove", makeDrawing);
+        /* square.addEventListener("mousedown", downMouse);//pulsar
+        square.addEventListener("mousemove", moveMouse);
+        square.addEventListener("mouseup", upMouse); */
+        //document.addEventListener("mousemove", drawingMouse);
+
+        /* function downMouse(event) {
+            state = 1;
+            x = event.layerX;
+            y = event.layerY;
+        }
+        function moveMouse(event) {
+            if(state == 1)
+            {
+                dibujarLinea(color.value, x, y, event.layerX, event.layerY);
+            } else{
+                x = event.layerX;
+                y = event.layerY;
+            }
+        }
+        function upMouse (event) {
+            state = 0;
+        } */
+        /* function drawingMouse(event) {
+            if (event.buttons == 1) {
+                dibujarLinea(color.value, x, y, event.layerX, event.layerY, paper);
+            }
+            x = event.layerX;
+            y = event.layerY;
+        } */
+        function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal, lienzo) {
+            lienzo.beginPath();
+            lienzo.lineWidth = 0;
+            lienzo.strokeStyle = color;
+            lienzo.moveTo(xinicial, yinicial);
+            lienzo.lineTo(xfinal, yfinal);
+            lienzo.stroke();
+            lienzo.closePath;
+        }
+        function makeDrawing(event) {
+            if(event.buttons == click.MOUSEDOWN) {
+                var movx = event.offsetX;
+                var movy = event.offsetY;
+                var ecolor = colors.value;
+
+                dibujarLinea(ecolor, x, y, movx, movy, paper);
+                x = event.layerX;
+                y = event.layerY;
+            } else if (event.button == click.MOUSEUP) {
+                x = event.layerX;
+                y = event.layerY;
+            }
+        }
+    </script>
+    <p>Move the mouse for drawing</p>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing with mouse</title>
+</head>
+<body>
+    <p>Preciosa click derecho o click izq para dibujar</p>
+    <canvas id="canvas" width="500" height="500"></canvas>
+    <input type="color" id="color" oninput="defcolor(this.value);">
+    <input type="range" id="grosor" oninput="defgrosor(this.value);" min="1" max="5" value="1">
+    <p>Your drawing</p>
+    <script type="text/javascript">
+
+        var canvas = document.getElementById("canvas");
+        var lienzo = canvas.getContext("2d");
+        var cordenadas = canvas.getBoundingClientRect();
+        var x = 0, y = 0, dibujando = false, color = "black", grosor = 2;
+
+        function defcolor(c) {
+            color = c;
+        }
+        function defgrosor(g) {
+            grosor = g;
+        }
+
+        canvas.addEventListener("mousedown", function(event){
+            x = event.clientX - cordenadas.left;
+            y = event.clientY - cordenadas.top;
+            dibujando = true;
+        });
+        canvas.addEventListener("mousemove", function(event){
+            if (dibujando == true) {
+                dibujar(x, y, event.clientX - cordenadas.left, event.clientY - cordenadas.top);
+                x = event.clientX - cordenadas.left;
+                y = event.clientY - cordenadas.top;
+            }
+        });
+        canvas.addEventListener("mouseup", function(event){
+            if(dibujando === true){
+                dibujar(x, y, event.clientX - cordenadas.left, event.clientY - cordenadas.top);
+                x = 0;
+                y = 0;
+                dibujando = false;
+            } { console.log(event);}
+        });
+        function dibujar(x1, y1, x2, y2) {
+        lienzo.beginPath();
+        lienzo.strokeStyle = color;
+        lienzo.lineWidth = grosor;//grosor de la linea
+        lienzo.moveTo(x1, y1);
+        lienzo.lineTo(x2, y2);
+        lienzo.stroke();
+        lienzo.closePath();
+        }
+
+    </script>
+</body>
+</html>
