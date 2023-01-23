@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>interactuando con users</title>
+        <link href="" rel="stylesheet"/>
+        <!-- <style></style> -->
+    </head>
+    <body>
+        <h1>Manipulación del DOM</h1>
+
+        <input id="calculo1" placeholder="....."/>
+        <input onchange="" id="calculo2" placeholder="......"/><!--onchange forma de escuchar eventos en input, escucha lo que se escribe en el input -->
+        <button id="btnCalcular" onclick="btnOnClick()">Calcular</button><!--onclick forma de escuchar eventos en button-->
+
+        <p id="result"></p>
+
+        <script>
+            const h1 = document.querySelector('h1');
+            const input1 = document.getElementById('calculo1');
+            const input2 = document.querySelector('#calculo2');
+            const btn = document.getElementById('btnCalcular');
+            const pResult = document.querySelector('#result');
+            //escuchar los eventos
+            /* btn.addEventListener("click", btnOnClick); */
+            function btnOnClick() {
+                const sumaInputs = parseInt(input1.value) + parseInt(input2.value);
+                if(sumaInputs){
+                pResult.innerText = "Resultado: " + sumaInputs;
+                console.log(sumaInputs);
+                } else { console.warn("Ingrese un numero en el campo"); pResult.innerText = "RELOAD Y INGRESE UN NUMERO EN LOS CAMPOS"};
+            }
+
+        </script>
+    </body>
+</html>

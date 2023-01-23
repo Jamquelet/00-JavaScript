@@ -348,3 +348,111 @@ export function solution(cars) {
       }
     });
   }
+
+  //
+
+//
+/* const name = "Juan David";
+const lastname = "Castro Gallego";
+const completeName = name + lastname;
+const nickname = "juandc";
+
+console.log("Mi nombre es " + completeName + ", pero prefiero que me digas " + nickname + "."); */
+
+function printName(completeName, nickname) {
+    console.log("My name is " + completeName + ", but i want that you tellme "+ nickname + ".");
+}
+printName;
+
+function presentation(name, lastName, nickName){
+    return console.log(`Mi nombre completo es ${name} ${lastName}, pero prefiero que me digas ${nickName}.`);
+}
+//
+
+
+const tipoDeSuscripcion = "Basic";
+
+switch (tipoDeSuscripcion) {
+   case "Free":
+       console.log("Solo puedes tomar los cursos gratis");
+       break;
+   case "Basic":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un mes");
+       break;
+   case "Expert":
+       console.log("Puedes tomar casi todos los cursos de Platzi durante un año");
+       break;
+   case "ExpertPlus":
+       console.log("Tú y alguien más pueden tomar TODOS los cursos de Platzi durante un año");
+       break;
+}
+let typeOfSuscription;
+if(typeOfSuscription == "free") {
+    console.log("solo cursos gratis");
+} else if(typeOfSuscription == "basic") {
+    console.log("cursos por un mes");
+} else if(typeOfSuscription == "expert") { 
+    console.log("cursos por un año");
+} else{
+    console.log("tu y alguien cursos por un año");
+}
+
+//
+
+class lenguaje {
+    constructor(nombre, tipado, funcionalidad, aprendizaje){
+        this.n = nombre;
+        this.t = tipado;
+        this.f = funcionalidad;
+        this.a = aprendizaje;
+    }
+}
+
+var $lenguajes = [];
+
+$lenguajes.push(new lenguaje("python", false, 90, "low"));
+$lenguajes.push(new lenguaje("JavaScript", false, 90, "medium"));
+$lenguajes.push(new lenguaje("C", true, 92, "low"));
+
+/* function $array(array) {
+    
+    /* for(let i=0; i < array.length; i++){
+        /* console.log(`${i + 1}${array[i]}`) 
+        console.log(array[i]);
+    }
+}  */
+
+function $array($lenguajes){
+    for(let i=0; i<$lenguajes.length; i++){
+        console.log($lenguajes[i]);}}
+
+    $array($lenguajes);
+
+    /* function imprimirElementos(arr) { //otra forma q crea un array donde despues se llama esta funcion y como parametro el array de los lenguajes
+        for (let i = 0; i < arr.length; i++) {
+          console.log(arr[i]);
+        }
+      } */ 
+      //
+    /*   function imprimirElementoxElemento(arr) {
+        for(let i=0; i<arr.length; i++ ){
+            console.log(arr[i]);
+        }
+      } */ //forma de funcion que recibe array como parametro e imprime cada valor del array por separado
+
+//
+//función que puede recibir cualquier objeto como parámetro e imprimir todos sus elementos uno por uno
+function imprimirPropiedades(obj) {
+    for (let prop in obj) {
+      console.log(prop + ": " + obj[prop]);
+    }
+  }
+  //enviar objeto a un array se hace con Object.values(obj)
+  //otra forma seria 
+  function prinForObject(objt){
+    const arr = Object.values(objc);
+    for(let i=0; i<arr.length; i++){
+        console.log(arr[i])
+    }
+  }
+ 
