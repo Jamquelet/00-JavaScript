@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>draftAstroEmt</title>
+</head>
+
+<body>
+    <h1>Categorización de No Realización de Visita</h1>
+    <p>Tipificación-Pendiente correcto</p>
+
+    <form>
+        <label for="reason">Motivo de la No Realización de Visita:</label>
+        <textarea id="reason" name="reason"></textarea>
+        <button type="submit">Categorizar</button>
+      </form>
+
+      <div id="result"></div>
+      
+      <script>
+        const form = document.querySelector('form');
+        const result = document.querySelector('#result');
+  
+        form.addEventListener('submit', event => {
+          event.preventDefault();
+          const reason = document.querySelector('#reason').value;
+          let category;
+  
+          if (reason.includes('cliente no fue contactado')) {
+            category = 'Imputable al cliente';
+          } else if (reason.includes('cliente no autoriza')) {
+            category = 'Orden del cliente';
+          } else {
+            category = 'Mala asignación';
+          }
+  
+          result.textContent = `El padre correspondiente es: ${category}`;
+        });
+      </script>
+</body>
+</html>
