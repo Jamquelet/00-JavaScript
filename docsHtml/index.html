@@ -1,0 +1,113 @@
+<!--plantilla rapida =! -->
+DOCTYPE html>
+<html>
+<head>
+    <title> Mi Primer Proyecto </title>
+    <style>
+        table, th, td { 
+            border:1px solid black;
+        }
+    </style>        <!--introduccion css lo que escribamos dentro de los {} se los vamos a aplicar a table, th, td. el style q se usa es el definido en table-->
+    <!--<link rel="stylesheet"
+    href="index.css"><!--invocar mi css color acuamarela de fondo-->
+</head>
+<body>
+
+    <table style="width: 500px;" >  <!-- finalizar con un ; cuando estamos editando estilos. width ancho style="border:1px solid black;" al agregarle style le damos un borde para diferenciar.como crear tablas como podemos listar como distribuir el contenido dentro de nuestras tablas, cabeceras o pie se divide en  Filas columnas cada columna puede tener una cabecera y tambien un pie-->
+        <thead> <!--como poder separarla de una manera logica indicandole al explorador que lo que se encuentra al comienzo es la cabecera y lo que viene es el cuerpo de nuestra tabla-->
+            <tr> <!--tr quiere decir table road o una fila dentro de nuestra tabla-->
+                <th>Producto</th> <!--alineado centro cabecera lo que hara es generar una columna-->
+                <th>Precio</th>
+            </tr>
+        </thead><!--thead sirve para agrupar elementos que se encuentran en la cabecera de nuestras tablas-->
+       
+        <tbody><!--sirve para poder identificar o agrupar todas las filas que pertenezcanal cuerpo de nuestra tabla-->
+            <tr>
+                <td> <!--et de td alineado a la izqcolocamos primer producto-->Oro</td><!--definir elementos estandares que se encuentran dentro de las celdas de nuestra tabla -->
+                <td>150k</td><!--definimos el precio en una segunda etiqueta-->
+            </tr>
+            <tr>
+                <td> Plata </td>
+                <td> 50k </td>
+            </tr>
+            <tr>
+                <td> Cobre </td>
+                <td> 25k </td>
+            </tr>
+        </tbody>
+        <tfoot><!---->
+            <td> </td><!--celda-->
+            <td>Total:225k</td><!--valor suma de los valores-->
+        </tfoot>
+
+
+    </table>    <!---->
+    
+    <ul>
+        <li>Elemento 1</li><!--list item o item de la lista-->
+        <li>Elemento 2 </li>
+        <li>Elemento 3 </li><!--salen puntos negros antes por ser lista no ordenada, para enumerar los elementos de la lista se cambia la etq de ul por order list ol-->
+        <li>Elemento 4 </li>
+
+    </ul> <!--ul:lista no ordenada, cada que añadimos elementos a esta lista estos van a aparecer con un punto negro con listas podemos mostrar distintos elementos dentro de nuestra web-->
+
+    <ol>
+        <li value="50"> Elemento 1</li><!--salen numeros de forma ordenada-->
+        <li>Elemento 2 </li><!--listar elementos dentro de las pag web para hacer que empiece el valor o numeracion principal pero los otros siguen el consecutivole digo cual es el valor dentro de li que quiero q tenga al comiendo-->
+        <li>Elemento 3 </li>
+        <li>Elemento 4 </li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-alpha;">sub elemento 1</li><!--agregamos una propiedad style="letras".crear listas y anidarlas dentro de otras listas-->
+                <li>sub elemento 2</li><!--editor de lower alpha se puede reemplazar por otro valor cuadrados simbolos. o lower-roman para numeros romanos-->
+                <li>sub elemento 3</li>
+
+            </ol>
+        </li>
+
+    </ol>
+
+
+
+    <form action="/formulario" method="POST"> <!--action debe contener una ruta dentro de nuestro servidor recibe del input type="submit". a donde lo va enviar a que servidor ruta del servidor. si esta en php .php metodo para poder enviar datos al servidor. get enviar los valores que se encuentran dentro de los campos atraves de la url. dentro de form diferentes etiquetas del formulario input <input/>-->
+        <br>  <!--post no es tan seguro no se muestran datos en la cabecerano en direccion url donde se envian datos se ven inspeccionamos la web y vamos a ntwork-->
+       <label for="nombre" style="color:green"> Nombre </label> <!--label nombre del input. name interpreta datos del formulario-llave nombre-valor contiene la llave chanchito-plasholder-tipo de dato dentro del input-->
+       <input value="777" type="text" id="nombre" name="nombre" placeholder="Nombre"/><!--tipe se comporte diferente dependiendo del valor text por defecto-->
+       <!--value valor por defecto. etiqueta form recopilar info user input campo de texto etiqueta for y id agarrar foco del campo de texto en recuadro et name: enviemos formulario a servidor llave y valor la llave es lo q se indique y el valor lo que se coloque en el campo placeholder:tipo de dato que el user debe colocar dentro del input type:"submit -> boton, text, email,password para ocultar valor, radio boton para seleccionarcirculo, checkbox cuadro para chulear, file para elegir archivo" -->
+       <br><br>
+       <label for="apellido" style="color:green"> Apellido </label>
+       <input value="" type="text" id="apellido" name="apellido" placeholder="Apellido"/>
+       <br><br>
+       <label for="comentario" > Comentario </label>
+       <br>
+       <textarea cols="50" rows="10" id="comentario" placeholder="Ingrese Comentario" name="comentario">ESTE ES UN VALOR x Defecto</textarea><!--propiedades del input rows:filas cols:recibe columnas form:el id q haga referencia cuando lo pinchemos-->
+       <br><br><!--text area similar al input no utiliza valor por defecto value -->
+       <input type="submit"/><!--"enviar" toma todos los datos y los envia a action boton cuanto lo pinchamos toma todos loa valores que se encuentren dentro de los campos del formulario y los va a enviar al servidor, tenemos que especificar a donde todos estos datos se vayan se hace dentro de la etiqueta form action="contiene ruta dentro del servidor o otra ruta otra app otra web(formulario si tenemos el servidor en .php o si utilizamos un frameword que se encargue de ocultarnos las extenciones de nuestros archivos le indicamos action="/formulario", method:indicar el metodo que vamos utilizar para poder enviar datos a nuestro server dos alternativas GET(enviar los valores que estan dentro de los campos atraves de la url maxima de 255 caracteres) o POST(no es seguro otra forma de enviar datos) lo seguro es utilizar certificados que se encarguen de encriptar todas las conexiones, boton sumit no permite agregar et dentro de el -->
+       <!--para asignar valores por defecto a los formularios et value="valor por defecto" en placeholder para valor por defecto en text area vamos al final antes del cierre de la et-->
+       <br><br>
+       <button type="button"> Tipo boton </button> <!--button et personalizable, puedo añadir imagen boton imagen se puede añadir boton imagen con et img src cerrar la et ya que se coloca texto de enviar es importante especificar su tipo et type="podemos tener 3 valores button( es solo un boton no envia toca especificar que comportamiento este tenga se hace con JavaScrip la ventaja es que se pueden incluir mas et de html ), reset(deja el formulario con los valores que tenia inicialmente), submit(cuando creamos un boton dentro de la et de form toma por defecto valor submit enviar formulario a la ruta asignada en action utilizando el metodo)-->
+       <button type="reset"> Tipo reset </button> <!--con js le damos funcionalidad cual va a ser el comportamiento que este tenga-->
+       <button type="submit"> Tipo submit o enviar </button><!--cuando definamos un boton en html indiquemos su tipo con type-->
+    
+    </form>
+    <br> <h1> Titulo 1 </h1>
+
+    <h2> Titulo 2 </h2>
+    <h3> Titulo 3 </h3>
+    <h4> Titulo 4 </h4>
+    <h5> Subtitulo 5 </h5>
+    <h6> Subtitulo 6 </h6>
+    <p> Parrafo </p>
+    <p> Parrafo 2</p>
+    <hr><!--salto pagina separar texto o sección-->
+    <h2> Titulo 2 </h2>
+    <p> Parrafo 3. <span style="color:blue">Etiqueta spam</span> Etiqueta br <br> saltos de linea</p> <!--referenciar texto o dentro de otras etiquetas.Et span hace una seleccion silenciosa de nuestros elementos-->
+    <a target="_blank" href="https://www.google.com.co">hipervinculo ir a google</a>
+    <!--a(ancore) podamos navegar href direccion hipervinculo en misma pestaña si añadimos antes tarjet="_blank" se abrira en una nueva pestaña sistema operativo monday.com-->
+    <br><br><em> curvatura de la letra </em> <br> <br>
+    <img src="img/Tacos.jpg" width="200" height="250"/> <br><br> <!--la etiqueta se cierra indicandole un / inmediatamente(etiqueta autocontenida)-->
+    <!--redimencionarla width=""ancho pixeles height=""alto o utilizar solo uno img/para darle ruta de la carpeta src=puede ser una ruta "https://www." o imagen del disco duro. para -->
+
+    <!--<scrip src="index.js"></scrip><!--invocar mi js-->
+</body>
+</html>

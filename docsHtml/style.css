@@ -1,0 +1,217 @@
+/*body {
+    color:;
+}*/
+
+/*h1{ estilo seleccionando la et
+    color:turquoise;
+}*/
+
+#titulo{ /*seleccionando el selector con # le digo al cssque tiene que buscar es un elemento con una propiedad de id*/
+    color:blueviolet;
+}
+/*p{
+    color:chartreuse;
+}*/
+/*.texto{ /* para indicarle al css que vamos a seleccionar una clase utilizamos el . luego el nombre de la clase 
+    color:chartreuse;
+}*/
+p.texto{/*et de p que contiene una clase solo vamos a aplicarle un estilo de css a las et de p que tambien contengan la clase de texto todas las et de p que tambien contengan "texto"*/
+    color:green;
+}
+p.especial{
+    color:deeppink;
+}
+div p { /*todas las et de p que se encuentren dentro de una et de div se les asigne un estilo. div espacio p espacio {}. en todas las et de div que contengan hijos de et p pueden ser directos o nietos quiero q tengan el siguiente estilo */
+    color:aquamarine;
+}
+div h2, div h3 { /*selectores*/
+    color:brown;
+}
+/*seleccionar mas de un elemento y a estos aplicarlos exactamento el mismo estilo de css coma espacio y el nuevo selector que yo quiero aplicar, h3. si yo quiero aplicar a los h3 que esten dentro de un div escribo div espacio h3*/
+*{
+    font-size: 24px; /* seleccionar todos los elementos que tengamos dentro del html*/
+    /*color:black; /* /*propiedades de css/*este selector va a aplicar estas propiedades solo si estas no han sido definidas por otros selectores, color:; */
+}
+/*.color { /*La propiedad de color, selector de la clase de color  sirve para poder asignarle un color a la fuente o al texto dentro de las et de html se puede definir el color de diversas formas*/
+    /*color: #000000  6 caracteres, el de la izquierda determina el mayor valor el segundo el q identifica los decimales delcolor  o siendo o un decimal cero f un decimal 9 o 99, con el segundo digito que tiene asignado el color podemos variar un poco la intensidad del color y tener mas variedades o combinaciones ; /*valor exageximal se anotan con un numeral o almohadilla al comienzo siempre despues 3 o 6  caracteres los cuales pueden ir desde el cero hasta la f siendo 0 la completa ausencia de color (negro) y siendo f la mayor expresion del color(blanco)*/ /*propiedad  control espacio para ver lista de colores,. Formas de elegir colores dentro de css.3 alternativas 1. utilizando la convencion rgb, 2 utilizando exageximal 3 utilizando valores hsl */
+
+/* 000 representa el negro  y el fff blanco, los dos primeros 00 equivalen al rojo los siguientes dos al verde y los otros dos al azul}
+*/
+/*.color {
+    color: rgb(0; 255; 0);
+}
+convencion de rgb valores del 0 al 255 siendo el primer valor el rojo el segundo el verde y el siguente azul*/
+
+
+/*Propiedad de css donde a los elementos de html le podemos asignar un borde el primer elemento que le asigno es el grosor ej:5px espacio luego el color luego el estilo del borde que va a tener este elemento de html control y espacio para ver alternativas opciones que nosotros tenemos dashed delineada o punteada, solid linea solida dotted son puntos, otras alternativas son: double (valores q se pueden asignar a elementos tridimencionales groove ridge inset outset) none hidden */
+.color {
+    /* border: 5px black dashed;  */
+    border-style:double; /*permite poder asignar estilo al borde */
+    border-color: aqua;
+    border-radius: 5px; /*borde redondeado*/
+    border-width: /* 5px */ 2rem; /*ancho del borde los px unidades de medidad para asignar dimensiones a elementos utilizando css 1 px und minima que se utiliza en la web para poder mostrar algo es una unidad relativa que trata de hacer referencia a ese cuadro de luz q compone una imagen existen otras und de medida centimetros pulgadasn(in) o milimetros(mm) puntos(pt)  pica (pc) unidades relativas  ej 2 veces el tamaño de la fuente que se esta utilizando actualmente(em)*/
+}
+/*si vamos al explorador e inspeccionamos este elemento nostros podemos forzar elementos de css que este tenga donde dice styles podemos agregar elementos sin necesidad de escribirlos en nuestro editor /*font-size: 10px
+unidad de medida rem es relativo al tamaño de la fuente del elemento race y es la et de html q esta en el index html 1 rem son 16 px 2 rem 32 px */
+/*como manipular el fondo de los elementos o el background se abre un nuevo elemento dentro del html luego de body ej:et article*/
+/*para seleccionar los elemetos con id tenemos que utilizar el #*/
+#fondo { /*La manera mas corta para que podamos indicar todas las propiedades de background excepto la de height y la de backgnd-size: utilizando la propiedad de background: dentro podemos indicar color #f00 separado de la url donde se encuentra la img despues le indicamos repeat-y y al final center bottom;*/
+    /*background: #f00 url('ice.jpg') repeat-y center bottom; sale con tamaño mal por haber definido antes backgraund-size esta no la va tener en cuenta si queremos utilizar las dos propiedades por separado vamos a colocarla despues de background:*/
+    background-color: red; /*fondo de color de ese solo elemento article con un id de fondo se puede utilizar el sesageximal o el rgb*/
+    /*opacity: 0.3;*/
+    height: 200px;
+    background-image: url('ice.jpg') ; /*sale de fondo en solo este elemento*/
+    background-size: cover ; /*permite redimencionar la imagen q tengamos de fondo le damos las dimenciones. puede recibir distintos valores 1. background-size:auto; (quiere decir que va a detectar el tamaño que este tiene que tener de manera automatica. 2. cover; la img utiliza todo el ancho que tiene dispo img proporcional 3. contain; contiene la img dentro de las dimensiones que le especifiquemos a este elemento*/
+    background-repeat:no-repeat ; /*repeat-x o y;*/
+    background-position: left top ;/*cambiar la posicion en la cual comienza a repetirse la img.left el primer valor es indicarle donde se va encontrar posicionada este en el eje horizontal. el sig valor es donde queremos que este se ecuentre posicionado en el eje vertical le indicamos top queda igual. 1mer valor rigt se mueve a la derecha. center queda en el centro. los valores que le podemos asignar en la seg posicion de bgrnd position es top center bottom. a bgrnd position le podemos entregar valores en dimenciones en px cm mm pulgadas ...desde donde va a ser nuestro fondo dentro de nuestro elemento  */
+    /*height: 100px; alto*/ /*como indicarle una imagen de fondo background-image: url('ice.png)*/
+/*la opcion rgba(0,0,0);negro. la intensidad seria rgba(0,0,0,1); este ultimo elemento es que da la opacidao la trasparencia siendo 1 un valor completamente solido y siendo 0 un valor completamente trasparente se puede utilizar 0.3 es un negro trasparente lo que hace que le demos opacidad o trasparencia que va a tener este color*/
+/* colores rgba podemos indicar una trasparencia que tiene el elemento completo pasandole la propiedad de opacity siendo 0 un elemento q no se ve en lo absoluto y 1 un elemento q se ve completamente, le da trasparencia al elemento completo y no solamente al color en especifico */
+/*background-size:200 200 ; podemos darle dimenciones ancho ej 400px segundo valor alto 400px*/
+/*para prevenir que la imagen salga doble background-repeat:no-repeat.Podemos especificar si queremos que esta img se repita de manera vertical o de manera horizontal solamente b-r: repeat-x ; se repite horizontal para q sea vertical-y */
+   /*Podemos utilizar la manera corta para poder tambien pasarle el tamaño que va a tener nuestra img de fondo al final despues de la pusicion donde tiene que iniciar nuestra img de fondo center bottom / y aqui las dimenciones mantiene las dimenciones background: #f00 url('ice.jpg') repeat-y center bottom / 100px 100px;*/ 
+    margin: 15px 20px 25px 30px;
+        }
+/*Espacios a nuestros elementos. Propiedad de Margin permite poder agregar un espacio por fuera de los elementos que nosotros definamos en nuestro html vamos al index.html agregamos un <div class="margen" {}> con la clase margen */
+.margen { /*seleccionamos la clase aplicar la propiedad de margin tenemos 5 alternativas top bottom left right agregan un margen arriba abajo izq der margin solo podemos asignar esas mismas propiedades seria margin: 15px(margen de arriba:margin-top) 20 px(margin der right) 25 px(margen abajo o margen bottom ) 30px(margen left o izq);*/
+    background-color: chocolate;
+    margin: 15px 20px 25px 30px;/*superior inferior izq dere escribiendo un solo valor 15px; para todosinspeccionamos en computed nos aparece el margen bo y par*/
+    padding: 30px 25px 20px 15px;  /*mismas propiedades top bottom left right valores invertidos se genera un espacio pero dentro del elemento diferencia entre espacio afuera del elemento y el espacio que se agrega dentro del elemento y background deja el elemento dentro no fuera y padding genera espacios dentro del elemento*/
+    /*esos bordes permiten ver el padding q va a tener un elemento para que no se encuentren tan pegado a los bordes y para que se separen de otros elementos */
+    border: solid 1px black;  /*le damos solid 1px black; se encuentra adentro del margin afuera del pading justo en la mitad*/
+    /*le podemos asignar un valor unico para que este valor se asigne al margin top bottom right left se eliminan los valores de margin se escribe solo 15px para mas equivalencia entre los elementos lo mismo se puede hacer en padding y le podemos agregar 15px lo q hara tomar el primer valor como el padin vertical y el segundo valor como padin horizontal a padding le podemos agregar un tercer valor de 5px en este caso el primer valor de padding vendria siendo el padin superior el segundo el padin horizontal y el tercero el padin inferior y esta misma estrategia se opuede hacer en margin o en padding */
+    height:100px ; /*sirve para para poder asignar un alto al elemento*/
+    width:50px ;/*ancho de los elementos todo el contenido se reduce para que cumpa con el height y con el width el texto se sale del espacio y tira hacia abajo. Poder cambiar la visiviliza de ese texto vamos a margin  y le damos la propiedad de overflow:*/
+    overflow: scroll ; /*por defecto esta tiene el valor de visible se puede cambiar por hidden hace que todo el contenido que no alcance a mostrarse dentro del elemento lo va a ocultar. scroll lo q hace agrega barras laterales para poder deslizarnos dentro de este elemento html para ver el contenido que este tiene */
+    /*box model es como se posiciona cada elemento html en nuestro doc y todo elemento html toda et va a tener un margen un border un pading y un contenido =anchocompleto el valor total del ancho de nuestro elemento html utiliza todo*/
+    outline: 1px solid red ; /*es como un borde pero que se coloca por fuera del borde pero esta antes de margin y recibe las mismas propiedades del borde */
+}
+/*seleccionamos la clase texto*/
+.text {
+    color:black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*para cambiarle la fuente al texto el estilo de fuente intenta cambiar la fuente verdana si no continua con geneva o continua con tahoma si falla con la otra*/
+    /*font-family:'Roboto', sans-serif por si no carga la primer fuente. para fuentes custonizadas de internet vamos al explorador google font copio la fuente <link> y se la pegamos en el index.html vamos a la cabecera dentro de la et de headluego de title */
+    text-align: center; /*propiedad de text align poder dejar el texto centrado(center) justificado a la izq o derecha. viene el valor left por defecto pero se puede cambiar por right; o justify; pequeño espacio entre palabras para utilizar todo el ancho disponible no con la ultima linea*/
+    text-decoration: line-through underline overline; /*indicar una decoracion a los texto le asignamos none que viene por defecto o unel ancontare; underline da un subrayado. para poner una linea sobre este como tachandolo escribimos line-through. la linea por encima del texto es con overline */
+    text-shadow: 3px 5px 5px blue;/*tambien se le puede indicar una sombra o sombreado con text-shadow; rcibe lo 1ro es cuanto se va mover hacia la derecha 3px el sigiente valor es cuanto queremos mover la sombra hacia abajo 5px color aparece por detras del texto que escribimos podemos agregar antes de color 5 px la cantidad de plure o difuminado que se agrega a la sombra*/
+}
+/*Los links en html pueden tener 4 posibles estados. el 1ro cuando este no ha sido visitado, el 2do cuando ha sido visitado, el 3ro cuando pasamos el mousepor encima de el. el 4to es cuando este link se encuenta activo*/
+/*Para asignarle estilo a los links, para cambiarle los colores a esos link debo quitar una propiedad que habiamos agregado antes con el selector universal *color:black;*/
+/*Ir al index.html en el comienzo de la et de body agregamos un link <a> <a href="https://www.google.com" y agregamos el texto> 
+vamos al css y selecccionamos todos los links con a despues : para indicar cual es el estado del link que yo voy a seleccionar a:link{} le estoy indicando a css que lo q queremos es seleccionar cuando el link no ha sido visitado
+a:visited {} va a aplicarle estos estilos si el link ya han sido visitado. selecciono otro selector a:hover es cuando yo estoy pasando el mouse por encima y el selector de estado active es cuando yo estoy pinchando el link se deben agregar en orden link visi...
+a estos selectores nosotros ppodemos agregar todas las propiedades de css borde redondeado color de fondo incrementar tamaño de la fuente varias propiedades que seleccionan el estado de un link*/
+a:link{
+    color:blueviolet;
+}
+a:visited{
+    color:gray;
+}
+a:hover{
+    color:yellow;
+}
+a:active{
+    color:springgreen;
+}
+/*
+Listas: en el index.html en body antes de la et de a, agregamos una et de lista no ordenada <ul> <li></li></ul>
+al final seleccionamos nuestra lista ul tambien podemos asegnar estilos, para quitar los puntos si no me gustan con la propiedad de list-style-type:; none desaparecen los puntos, circle, disc es esto lo que hace es cambiar la forma en como aparecen los puntos no aparecen por que tengo padding left. georgian son simbolos
+por defecto viene con un padding a la izq para resetear ese valor le damos un padding-left: 0; se alinean los elementos a la iz
+si quiero poner los puntos afuera del listado list-style-position:; inside es para que los puntos se encuentren dentro se alinean con el texto en caso de salto de linea
+si queremos listar muchos elementos y que estos tengan varias propiedades no vamos a utilizar mucho las listas vamos a utilizar mas cuando construimos paneles de  administracion son las
+
+Tablas: para darle estilo vamos al html en body antes de ul creamos una <table> 
+*/
+ul {
+    color:black;
+    background-color: cyan;
+    list-style-type: none;
+    padding-left: 0;
+    /*list-style-position: inside; */
+}
+
+table{
+    width: 100%; /*ancho para que utilice todo el documento*/
+    border-collapse:collapse;
+}
+th, td {  /*Seleccionar celdas incluso las de titulo para asignarles un borde*/
+    border: solid 1px #eee; /*borde con peq separacion entre celdas para eliminar eso vamos al selector de tabla y le damos la opcion border-collapse:collapse;*/
+    padding: 5px;
+}
+
+th {/*para seleccionar solamente las cabeceras y asignarles un color solamente a ellas*/
+    background-color: tomato;/*color fondo*/
+    color: white; /*Color fuente*/
+    text-align: left;/*alinear texto a la izq*/
+}
+
+tr:nth-child(even) { /*permite seleccionar solamente algunos elemento en particular dentro del parentesis se pueden colocar las opciones de odd (par) o even (impar)*/
+    background-color: #eee; /*selector para seleccionar elementos pares o impares dependiendo si se encuentran en un listado o dentro de una tabla
+    podemos asignar un color diferente a cada linea de nuestra tabla ej:impares blancos pares fondo gris suave*/
+}
+
+tr:hover { /*cuando pasemos el mouse por encima de alguna de estas filas yo quiero que cambie de color para eso agregamos otro selector de tr*/
+    background-color: #aaa ;/*selector para ver estado de los links hover sirve aqui*/
+    cursor: pointer; /*coloca el icono de la manito cuando pasemos el mouse por encima de nuestra tabla*/ 
+}
+
+/*Propiedad de display:indica como vamos a colocar los elementos de html sobre nuestro documento. vamos al html en body antes de table agregamos un <div></div> <span></span>  estas et tiene la propiedad de display pero tienen valores distintos div utiliza todo el ancho y span no vamos al css y seleccionamos la et de span al div le damos la class="inline"
+*/
+span { /**/
+    display: block;/*block es el que por defecto viene en la mayoria de elementos hace un salto de linea display: none; hace que los elementos desaparezcan */
+    /*visibility: hidden;/*Otra et para ocultal elementos es la de visibility con valor hidden*/
+    /*Propiedad para asignar un ancho maximo a nuestros elementos que se diferencia de width por q esta le va a asignar siempre el ancho encambio maxwidth le va asignar como maximo ese ancho pero puede ser menos*/
+    max-width:300 px;
+    background-color: red;
+}
+
+.inline {/*seleccionamos los elementos con la clase de inline le pasamos la propiedad de display por inline para colocar el texto de lala al lado de lele sin salto de linea. inline los elementos no comienzan en una nueva linea a diferencia de display block que forza que los elementos partan en una nueva linea. et de html que vienen por defecto con display inline son span ancontar o link y las et de img*/ 
+    display:inline;
+}
+/*propiedad para poder posicionar los elementos en distintas partes de la pantalla tenemos que crear un nuevo elemento en nuestro index article con id de position  */
+#position { /*#selector de id*/
+    position: relative;/*propiedad position con valor static es el valor por defecto con el que vienen todos los elementos de html, relative es una posicion q es relativa a donde debiese estar posicionado este elemento, otro valor de position es fixed; le indica que este tiene q tener una posicion con respecto a lo que estamos viendo en el explorador al yo hacer scroll hacia abajo este se empieza a mover con todo el documento. el valor de absolute; se sobrepone se posiciona relativo con el elemento padre mas cercano que este tenga si no existe el elemento padre va a usar la et de body, otro valor es sticky; toma la posicion que le corresponde mezcla de estatic pero si le añado la propiedad de top se empieza a mover con el scroll mezcla entre relative y fixed tiene un top de 25px de la posicion de mas arriva*/
+    left: 20px; /*en este caso le damos una propiedad de left tambien existen right bottom top le indicamos la distancia que se tiene que mover desde la izq*/
+    /*top: 25px;se desplaza hacia abajo y se pone encima de los otros elementos */
+}
+/*Propiedad que hace flotar a los elementos html dentro del mismo doc vamos al index empezando la et body agregamos un div y dentro de este div vamos a agregar dos div, */
+.left {
+    float: left;/*el contenido se desplaza hacia abajo. el float toma el elemento dentro de la etiqueta html en el cual el se encuentra lo hace flotar hacia la izq . float toma todos los elementos especialmente si le indicamos algunas medidas con width o heidth y los va hacer flotar  los demas elementos los posiciona en el lado contrario*/
+    width: 200px;
+    height: 200px; 
+}
+.right { /*sirve mucho cuando queremos colocar una imagen y algun costado mas texto*/
+    float: right; /*con la propiedad de float podemos empezar a alinear elementos uno al lado del otro si esq a todos le asignamos la mismapropiedad de float*/
+}
+.container{
+    height: 200px; /*altura*/
+}
+
+/*.card{
+    border: solid 0px #ddd;
+    border-radius: 5px;
+    margin: 0; /*vertical 0 horizontal 15 px*/
+    /*padding: 10px 0; /* 0 horizontal*/
+    /*width: 33.33%; /*ancho porcentual*/
+
+/*Forma en que los framewords de css utilizaban para poder asignarnos columnas en el caso de .card estamos colocando tres columnas por eso cambiamos la clase de card por column */
+.column{
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+
+.inline-block{
+    display: inline-block;/*similar al valor de inline con la diferencia que nosotros cuando le pasamos inline-block a la propiedad de display tambien le podemos asignar alto y un ancho a estos elementos.inline solo no se le puede asignar la propiedad de width o de heig*/
+    height: 55px;/*inline-block se utiliza cuando queremos hacer menus de navegacion para que estos tengan los link de izq a dere o de derecha a izq y de esta manera se le pueda asignar un ancho fijo y va a hacer que estos links se vean uniformes a diferencia de utilizar solamente inline */
+    background-color: red;
+}
+/*como poder centrar un elemento vamos al index.html y camos a agregar un section con clase center despues de body*/
+
+.center {/*lo q se centra es el elemento el cual contiene el texto. para centrar verticalmente no se le da un alto y se le da un padding vertical padding: 50 px 0; */
+    padding: 50px 0;
+    text-align: center;/*para centrar el texto que se encuentra dentro a la clase de center le damos un text-align:center;*/
+    width: 200px;/*para centrar un elemento tenemos que indicarle siempre un ancho y este no puede ser del 100 <100%*/
+    margin: 0 auto; /*0 para que no aparezca centrado verticalmente*/
+    background-color: aqua;
+}

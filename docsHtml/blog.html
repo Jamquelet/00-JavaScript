@@ -1,0 +1,46 @@
+<!DOCTYPE html>  <!--para iniciar !+tab--> 
+<html >
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <header> <!--header se utiliza para poder agrupar links imagen o logo de nuestra pagina o tantas etiquedas de header cuantas veces queramos. no se puede poner una et de header dentro de otra et de header o de footer-->
+        <h1 id="titulo"> First Blog JAMM </h1><!--nombre del blog.id or class para poder darle un identificador unico o generico a nuestras et de html para poder interactuar con ellos mediante js o para poder asignarle algun estilo para que este cambie la forma en como se ve-->
+    </header> <!--estos parametros que se pasan a las et se conocen con el nombre de atributo. id atributo estos nos van a servir para que podamos interactuar con estos elementos ya sea mediante js o para poder asignarle un estilo no asginarle mas de un atributo o identificador debo cambiar texto o utilizar el atributo de class para seleccionar mas de un elemento ya sea con js o css -->
+    <div><!--div misma funcionalidad que la etiqueta section -->
+        <p>soy un parrafo dentro de un div</p>
+        <div>
+            <div>
+                <p>Et dentro de un div de un div</p><!--desde que no este nombrado con un id o con una clase se puede eliminar--> 
+            </div>
+        </div>
+    </div>
+
+    <section> 
+        <article class="post"> <!--article se utiliza para poder definir contenido completamente independiente. definir los post de un blogt titulo descripcion imagen parrafo, historia de noticias, en facebook para poder enmarcar una publicacion y tambien para un tuit en el caso de twiter o para una imagen en el caso de instagram titulo descripcion comentarios et article-->
+            <h2>Titulo de mi post </h2><!--class se utiliza para poder identificar mas de un elemento que yo potencialmente puedo seleccionar con js o css  -->
+            <p> Descripción de mi post</p>
+            <img src="../assets/dragonuto0.jfif" width="300" />
+            <p>Texto del articulo</p>
+        </article>
+        <article class="post"> <!--puede ser post una pag una noticia-->
+            <h2>Titulo de mi post2 </h2><!--class nos sirve para que con js o css utilizando los selectores podamos seleccionar estos elementos atributos sirven para identificar estos elementos pueden ser seleccionados con selectores-->
+            <p> Descripción de mi post2</p>
+            <img src="../assets/Dragonuto.jpg" width="250" />
+            <p>Texto del articulo 2</p>
+        </article>
+        <article class="post"> 
+            <h2>Titulo de mi post3 </h2>
+            <p> Descripción de mi post3</p>
+            <img src="../assets/Tacos.jpg" width="200" />
+            <p>Texto del articulo 3</p>
+        </article>
+        
+    </section> <!--section sirve para definir secciones de nuestra app y dentro de las secciones de la app podamos poder las et que queramos-->
+    <footer> 
+        <a href="#titulo">Ir al inicio de la pag</a><!--#podemos indicarle el id no la class para que la pagina vaya a esa seccion sin que esta se refresque-->
+        <a href="mailto:boruto@gmail.com" > contactame aqui </a><!--ancontare link tipo a. mail to cuando le demos al link abre mi cliente de correo para yo poder enviar un correo por defecto al que ponemos -->
+        <p>Copyright 2022</p><!---->
+    </footer>  <!--se utiliza para colocar el pie de pagina de nuestra pag web. podemos tener varias et de footer dentro de nuestra app. contienen datos como el copyrithg de nuestra app informacion de contacto, informacion del sitio, o de como navegar en el sitio, links para poder volver al inicio de la pag web, informacion relacionada con el autor-->
+</body>
+</html> 
