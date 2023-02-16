@@ -17,7 +17,7 @@ let country = 'MX';
 let data = {id: 1, ...person, country};//para hacer la destructuracion en este caso con el operador de propagacion  de los elementos
 console.log(data); 
 
-//rest 
+//parametro rest 
 function sum(num, ...values) {
     console.log(values);
     console.log(num + values[0]);
