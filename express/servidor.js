@@ -21,11 +21,6 @@ function cursos(peticion, resultado) {
 aplicacion.listen(8989);
 
 
-
-
-
-
-
 /* const express = require('express')
 const app = express()
 
