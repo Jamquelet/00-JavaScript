@@ -1,3 +1,5 @@
+//el proyecto se inicializa desde la terminal primero con git, ahora el proyecto se inicializa con los comandos: npm init  la licencia es MIT
+
 function sum(num1,num2) {
     return num1 + num2;
 }

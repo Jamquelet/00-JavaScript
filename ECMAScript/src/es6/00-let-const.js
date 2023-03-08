@@ -1,3 +1,5 @@
+//npm init con el flag -y da una conf por defecto npm init -y 
+
 var lastName = 'JA';
 lastName = 'MM' //reasignar
 
